@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<section id="blog">
+    <h2>Ultimos Centros Deportivos</h2>
+    <div class="contenedor">
+
+        <article>
+            <img src="{% static 'img/cancha1.jpg' %}" alt="">
+            <h4>Centro Deportivo<br>San Bernardo</h4>
+        </article>
+        <article>
+            <img src="{% static 'img/cancha2.jpg' %}" alt="">
+            <h4>Centro Deportivo<br>Puente Alto</h4>
+        </article>
+        <article>
+            <img src="{% static 'img/cancha3.jpg' %}" alt="">
+            <h4>Centro Deportivo<br>Las Vizcachas </h4>
+        </article>
+    </div>
+</section>
+{% endblock %}

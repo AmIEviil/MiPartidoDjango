@@ -1,0 +1,45 @@
+#publica {
+    background:dimgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 25px;
+}
+.publica-titulo{
+    background: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: solid 4px gray;
+    margin-bottom: 45px;
+}
+.publica-registro{
+    width: 95%;
+    margin: auto;
+    max-width: 500px;
+    margin-top: 45px;
+    background: white;
+    border-radius: 15px;
+}
+.publica-input{
+    display: flex;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* generacion de sistema de columnas tipo bootstrap */
+.col-48{
+    width: 43%;
+}
+.col-100{
+    width: 93%;
+}
+.btn-enviar{
+    background: lightslategrey;
+    color: black;
+    margin:auto ;
+    font-size: 15px;
+}

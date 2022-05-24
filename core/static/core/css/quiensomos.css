@@ -1,0 +1,33 @@
+
+
+#informacion {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 45px;
+    
+}
+
+#informacion .info article {
+    margin: 25px;
+    margin-bottom: 2%;
+    margin-top: 12%;
+}
+
+#informacion h3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#informacion .info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+#informacion article{
+    margin: auto;
+    margin-bottom: 12%;
+    
+}
+

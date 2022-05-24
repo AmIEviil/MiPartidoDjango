@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static  '/core/dist/css/lightbox.min.css' %}">
+{% endblock %}
+
+{% block js %}
+<script src="{% static  '/core/dist/js/lightbox-plus-jquery.min.js' %}"></script>
+{% endblock %}
+
+{% block contenido %}
+
+<section id="bienvenido">
+
+    <h2>Centros Deportivos con MiPartidoWeb</h2>
+    <p>A continuacion se muestran los ultimos centros deportivos
+        que cuentan con el sistema de MiPartidoWeb</p>
+</section>
+
+<section id="blog">
+
+    <div class="contenedor">
+        <article>
+            <a href="{% static 'core/img/cancha1.jpg' %}" data-lightbox="perros"
+                data-title="Cancha Ubicada en Los Canelos 119. Contacto : Contacto.">
+                <img src="{% static 'core/img/cancha1.jpg' %}" alt="">
+            </a>
+            <h4>San Bernardo</h4>
+        </article>
+        <article>
+            <a href="{% static 'core/img/cancha2.jpg' %}" data-lightbox="perros"
+                data-title="Cancha Ubicada en Av. Gabriela 1019. Contacto : Contacto.">
+                <img src="{% static 'core/img/cancha2.jpg' %}" alt="">
+            </a>
+            <h4>Puente Alto</h4>
+        </article>
+        <article>
+            <a href="{% static 'core/img/cancha3.jpg' %}" data-lightbox="perros"
+                data-title="Cancha Ubicada en Av. Camino Las Vizcachas 666. Contacto : Contacto.">
+                <img src="{% static 'core/img/cancha3.jpg' %}" alt="">
+            </a>
+            <h4>Las Vizcachas</h4>
+        </article>
+        <article>
+            <a href="{% static 'core/img/cancha4.jpg' %}" data-lightbox="perros"
+                data-title="Cancha Ubicada en Font 810. Contacto : Contacto.">
+                <img src="{% static 'core/img/cancha4.jpg' %}" alt="">
+            </a>
+            <h4>Quinta Normal</h4>
+        </article>
+        <article>
+            <a href="{% static 'core/img/cancha5.jpg' %}" data-lightbox="perros"
+                data-title="Cancha Ubicada en Los Canelos 119. Contacto : Contacto.">
+                <img src="{% static 'core/img/cancha5.jpg' %}" alt="">
+            </a>
+            <h4>Colina</h4>
+        </article>
+    </div>
+</section>
+
+{% endblock %}
