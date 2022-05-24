@@ -119,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ['C:/Users/lokii/OneDrive/Escritorio/DJANGO/MiPartido/MiPartido/static']
+STATICFILES_DIRS = ['C:/Users/lokii/OneDrive/Escritorio/MiPartidoDJANGO/MiPartido/MiPartido/static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
