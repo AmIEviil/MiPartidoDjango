@@ -27,6 +27,9 @@ header label{
     text-align: center;
     margin-right: 10px;   
 }
+.menu .buscar .h1{
+    color:  red;
+}
 .menu .buscar .form-control  {
     text-align: center; 
 

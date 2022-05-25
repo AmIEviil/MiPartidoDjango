@@ -7,19 +7,23 @@
 <section id="blog">
     <h2>Ultimos Centros Deportivos</h2>
     <div class="contenedor">
-
         <article>
-            <img src="{% static 'img/cancha1.jpg' %}" alt="">
+            <img src="{% static 'core/img/cancha1.jpg' %}" alt="">
             <h4>Centro Deportivo<br>San Bernardo</h4>
         </article>
         <article>
-            <img src="{% static 'img/cancha2.jpg' %}" alt="">
+            <img src="{% static 'core/img/cancha2.jpg' %}" alt="">
             <h4>Centro Deportivo<br>Puente Alto</h4>
         </article>
         <article>
-            <img src="{% static 'img/cancha3.jpg' %}" alt="">
+            <img src="{% static 'core/img/cancha3.jpg' %}" alt="">
             <h4>Centro Deportivo<br>Las Vizcachas </h4>
         </article>
     </div>
 </section>
-{% endblock %}
+{% endblock contenido %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+{% endblock js %}

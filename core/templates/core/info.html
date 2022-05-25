@@ -2,6 +2,12 @@
 
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static  'core/css/quiensomos.css' %}">
+<script src="{% static  'core/js/sweetalert2.all.min.js' %}"></script>
+<script src="{% static  'core/js/jquery-3.6.0.min.js' %}"></script>
+{% endblock %}
+
 {% block contenido %}
 <section id="bienvenido">
     <h2>Bienvenidos Mi Partido Web</h2>
@@ -35,4 +41,4 @@
         </article>
     </div>
 </section>
-{% endblock %}
+{% endblock contenido %}

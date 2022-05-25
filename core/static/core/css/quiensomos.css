@@ -10,7 +10,7 @@
 #informacion .info article {
     margin: 25px;
     margin-bottom: 2%;
-    margin-top: 12%;
+   
 }
 
 #informacion h3{
@@ -28,6 +28,4 @@
 #informacion article{
     margin: auto;
     margin-bottom: 12%;
-    
 }
-

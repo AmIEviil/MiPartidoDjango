@@ -4,23 +4,32 @@
 
 {% block contenido %}
 {% block css %}
-    <link rel="stylesheet" href="{% static  'core/css/registroinicio.css' %}">
-    <script src="js/sweetalert2.all.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="{% static  'core/css/registroinicio.css' %}">
+<script src="{% static  'core/js/sweetalert2.all.min.js' %}"></script>
+<script src="{% static  'core/js/jquery-3.6.0.min.js' %}"></script>
 {% endblock %}
-        <section id="bienvenido">
-            <h2>Inicio Sesion Usuario </h2>
-            <p>Ingrese sus datos de usuario para acceder a todas nuestras funciones y prestaciones.</p>
-        </section>
 
-        <section id="formu">
-            <form class="form-registro" action="" method="POST" onsubmit="return valida()">
-                <h2 class="form-titulo">Inicio Sesion</h2>
-                <div class="contenedor-imput">
-                    <input class="col-100" type="email" name="txtEmail" id="txtEmail" placeholder="ingrese email" required minlength="10">                    
-                    <input class="col-48" type="password" name="txtPass" id="txtPass" placeholder="ingrese contraseña" required minlength="8" maxlength="12">
-                    <input class="btn-enviar" type="submit" value="Iniciar">
-                </div>
-            </form>
-        </section>
+<section id="bienvenido">
+
+    <h2>Inicio Sesion Usuario </h2>
+    <p>Ingrese sus datos de usuario para acceder a todas nuestras funciones y prestaciones.</p>
+
+</section>
+
+<section id="formu">
+    <form class="form-registro" action="{% url 'inicioSesion' %}" method="POST" onsubmit="return valida()">
+        {% csrf_token %}
+        <h2 class="form-titulo">Inicio Sesion</h2>
+        <div class="contenedor-imput">
+            <input class="col-100" type="text" name="txtUsuario" id="txtUsuario" placeholder="ingrese usuario" required
+                minlength="5">
+            <input class="col-100" type="password" name="txtPass" id="txtPass" placeholder="ingrese contraseña" required
+                minlength="8" maxlength="12">
+            <input class="btn-enviar" type="submit" value="Iniciar">
+        </div>
+        <div style="text-align: cecnter; color: red; font-size:xx-large;">
+            {{mensaje}}
+        </div>
+    </form>
+</section>
 {% endblock %}
