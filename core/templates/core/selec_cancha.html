@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+{% block css %}
+<link rel="stylesheet" href="{% static  'core/css/selec_cancha.css' %}">
+
+<script src="{% static  'core/js/jquery-3.6.0.min.js' %}"></script>
+{% endblock %}
+
+
+<section id="formu">
+
+
+    <form class="form-selec" action="{% url 'registro' %}" method="POST" onsubmit="return ValidarPass()">
+        {% csrf_token %}
+        <h2 class="form-titulo">Seleccion Cancha</h2>
+
+        <div class="selec-cancha">
+            <ol>
+                <ul for="col-48">
+                    <label for="col-48">Canchas</label>
+                    <select class="col-48" name="select">
+                        <option value="value1">Cancha Puente Alto</option>
+                        <option value="value2" selected>Cancha Puente Alto</option>
+                        <option value="value3">Cancha Puente Alto</option>
+                    </select>
+                </ul>
+                <ul>
+                    <label>Canchas</label>
+                    <select class="col-48" name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </ul>
+                <ul>
+                    <label for="col-48">Canchas</label>
+                    <select class="col-48" name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </ul>
+
+            </ol>
+        </div>
+    </form>
+
+</section>
+{% endblock contenido %}
+{% block js %}
+<script src="{% static 'core/js/AlertaRegistro.js' %}"></script>
+{% endblock js %}

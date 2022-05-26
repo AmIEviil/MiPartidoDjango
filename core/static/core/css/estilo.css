@@ -47,5 +47,6 @@ footer .contenedor{
     border-top: solid 5px rgb(51, 51, 51);
     margin: 45px 0px;
     padding: 15px;
-    border-bottom: solid 5px rgb(51, 51, 51);    
+    border-top: solid 5px rgb(51, 51, 51);  
+    background-color: dimgray;
 }

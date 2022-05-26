@@ -1,25 +1,34 @@
 
-#blog {
+#video {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 45px;
     margin: auto;
 }
-
-#blog .contenedor article img{
-    width: 250px;
-    height: 250px;
+#title{
+    text-align: center;
+}
+#video .contvid article {
     border: solid 4px rgb(0, 0, 0);
     border-radius: 7px;
 }
 
-#blog .contenedor{
+#video .contvid{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     
 }
 
-#blog article{
-    margin: 15px;
+#video article{
+    margin: 25px;
+}
+#centros h2{
+    color: black;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border-color: black;
+}
+#centros {
+    margin-bottom: 45px;
 }

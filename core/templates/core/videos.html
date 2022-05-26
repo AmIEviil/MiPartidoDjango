@@ -1,15 +1,32 @@
 {% extends 'core/base.html' %}
+{% load embed_video_tags %}
+
 
 {% load static %}
 
 {% block contenido %}
 
-    {% block css %}
-
-    {% endblock %}
-
-
-
+{% block css %}
+<link rel="stylesheet" href="{% static  'core/css/videos.css' %}">
+{% endblock %}
+<section id="video">
+    <div class="contvid">
+        <div id ="centros">
+            <br>
+            <h2>Grabaciones del usuario : {{user.username}} </h2>
+            <ol>{% for item in videos %}
+                <li>
+                    <h2>{{item.cancha}}</h2>
+                    <article>
+                        <div class="px-3 mb-5">{% video item.url '854x480' %}
+                        </div>
+                    </article>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</section>
 {% endblock %}
 
 {% block js %}

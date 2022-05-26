@@ -18,7 +18,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.core import serializers
 import json
-
+from .models import Video
 
 def home(request):
     return render(request, 'core/principal.html')
@@ -78,4 +78,8 @@ def registro(request):
 
 
 def videos(request):
-    return render(request,"core/videos.html")
+    videos = Video.objects.all()
+    return render(request,"core/videos.html",context={'videos': videos})
+
+def selec_cancha(request):
+    return render(request,"core/selec_cancha.html")
