@@ -23,14 +23,11 @@ from .models import Video
 def home(request):
     return render(request, 'core/principal.html')
 
-
 def centros(request):
     return render(request, 'core/centros.html')
 
-
 def info(request):
     return render(request, 'core/info.html')
-
 
 def inicioSesion(request):
     if request.POST:
@@ -76,10 +73,19 @@ def registro(request):
             return render(request, "core/principal.html")
     return render(request, "core/registro.html")
 
-
+@login_required(login_url='/inicioSesion/')
 def videos(request):
     videos = Video.objects.all()
     return render(request,"core/videos.html",context={'videos': videos})
+
+@login_required(login_url='/inicioSesion/')
+def perfil(request, username=None):
+    current_user = request.user
+    if username and username != current_user.username:
+        user = User.objects.get(username=username)
+    else:
+        user = current_user
+    return render(request,"core/perfil.html", {'user':user})
 
 def selec_cancha(request):
     return render(request,"core/selec_cancha.html")

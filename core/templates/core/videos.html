@@ -16,23 +16,20 @@
             <h2>Grabaciones del usuario : {{user.username}} </h2>
             <ol>
                 {% for item in videos %}
-                
-                <li>
-                    
-                    <article>
-                        <h2>{{item.cancha}}</h2>
-                        <h2>Cancha : 2</h2>
-                        <h2>Fecha : 23/03/2022</h2>
-                        <h2>Hora : 17:00 - 18:00</h2>
-                        <div class="px-3 mb-5">{% video item.url '854x480' %}
-                        </div>
-                    </article>
-                </li>
+                <article>
+                    <h2>{{item.cancha}}</h2>
+                    <h2>Cancha : 2</h2>
+                    <h2>Fecha : 23/03/2022</h2>
+                    <h2>Hora : 17:00 - 18:00</h2>
+                    <div class="px-3 mb-5">{% video item.url '854x480' %}
+                    </div>
+                </article>
                 {% endfor %}
             </ol>
         </div>
     </div>
 </section>
+
 {% endblock %}
 
 {% block js %}
